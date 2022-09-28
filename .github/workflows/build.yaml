@@ -21,7 +21,6 @@ jobs:
       - name: Build the app
         working-directory: ./project
         run: |
-          gradle init
           if [ ! -f "gradlew" ]; then gradle wrapper; fi
           chmod +x gradlew
           ./gradlew assembleDebug --stacktrace
